@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 260" fill="none">
+  <defs><style>text { font-family: Inter, Roboto, sans-serif; }</style></defs>
+  <rect width="600" height="260" fill="#0D1B2A"/>
+
+  <text x="300" y="26" text-anchor="middle" font-size="15" font-weight="700" fill="#42A5F5">SORT y MERGE — Flujo de Datos</text>
+
+  <!-- SORT -->
+  <rect x="20" y="50" width="270" height="140" rx="8" fill="#0D47A1" stroke="#1565C0" stroke-width="2"/>
+  <text x="155" y="72" text-anchor="middle" font-size="13" font-weight="700" fill="#42A5F5">SORT</text>
+
+  <rect x="35" y="85" width="80" height="35" rx="4" fill="#1A237E"/>
+  <text x="75" y="107" text-anchor="middle" font-size="9" fill="#90CAF9">USING</text>
+  <text x="75" y="118" text-anchor="middle" font-size="8" fill="#78909C">entrada.dat</text>
+
+  <text x="125" y="107" font-size="9" fill="#78909C">→</text>
+
+  <rect x="135" y="82" width="60" height="40" rx="4" fill="#FF7043" opacity="0.8"/>
+  <text x="165" y="98" text-anchor="middle" font-size="9" fill="#FFF">INPUT</text>
+  <text x="165" y="112" text-anchor="middle" font-size="8" fill="#FFF">PROC</text>
+
+  <text x="203" y="107" font-size="9" fill="#78909C">→</text>
+
+  <rect x="210" y="85" width="65" height="35" rx="4" fill="#263238"/>
+  <text x="242" y="100" text-anchor="middle" font-size="9" fill="#90CAF9">[SORT]</text>
+  <text x="242" y="113" text-anchor="middle" font-size="8" fill="#78909C">ASC KEY</text>
+
+  <text x="135" y="155" font-size="9" fill="#78909C">RELEASE →</text>
+  <text x="135" y="172" font-size="8" fill="#546E7A">(enviar a sort)</text>
+  <text x="230" y="155" font-size="9" fill="#4CAF50">← RETURN</text>
+  <text x="230" y="172" font-size="8" fill="#546E7A">(leer ordenado)</text>
+
+  <rect x="135" y="178" width="60" height="18" rx="3" fill="#4CAF50" opacity="0.7"/>
+  <text x="165" y="191" text-anchor="middle" font-size="8" fill="#FFF">GIVING</text>
+
+  <!-- MERGE -->
+  <rect x="310" y="50" width="270" height="140" rx="8" fill="#1A237E" stroke="#1565C0" stroke-width="2"/>
+  <text x="445" y="72" text-anchor="middle" font-size="13" font-weight="700" fill="#42A5F5">MERGE</text>
+
+  <rect x="325" y="85" width="55" height="25" rx="3" fill="#263238"/>
+  <text x="352" y="102" text-anchor="middle" font-size="8" fill="#90CAF9">suc1.dat</text>
+  <rect x="325" y="113" width="55" height="25" rx="3" fill="#263238"/>
+  <text x="352" y="130" text-anchor="middle" font-size="8" fill="#90CAF9">suc2.dat</text>
+  <rect x="325" y="141" width="55" height="25" rx="3" fill="#263238"/>
+  <text x="352" y="158" text-anchor="middle" font-size="8" fill="#90CAF9">suc3.dat</text>
+
+  <text x="390" y="130" font-size="12" fill="#FFAB40">→</text>
+
+  <rect x="405" y="100" width="70" height="30" rx="4" fill="#263238"/>
+  <text x="440" y="119" text-anchor="middle" font-size="9" fill="#90CAF9">[MERGE]</text>
+
+  <text x="485" y="130" font-size="12" fill="#4CAF50">→</text>
+  <rect x="500" y="105" width="65" height="25" rx="4" fill="#4CAF50" opacity="0.6"/>
+  <text x="532" y="122" text-anchor="middle" font-size="8" fill="#FFF">USING →</text>
+
+  <text x="440" y="175" font-size="8" fill="#78909C">OUTPUT PROCEDURE (RETURN)</text>
+
+  <!-- Pie -->
+  <rect x="20" y="205" width="560" height="40" rx="6" fill="#1A2332" stroke="#263238" stroke-width="1"/>
+  <text x="300" y="223" text-anchor="middle" font-size="10" fill="#78909C">
+    SD = Sort Description (temporal) &nbsp;|&nbsp; RELEASE = escribir a SD &nbsp;|&nbsp; RETURN = leer de SD ordenado
+  </text>
+  <text x="300" y="239" text-anchor="middle" font-size="9" fill="#546E7A">MERGE requiere archivos PRE-ORDENADOS por la misma clave · Para grandes volúmenes: SORTWK</text>
+</svg>

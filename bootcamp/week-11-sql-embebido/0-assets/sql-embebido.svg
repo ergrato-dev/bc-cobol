@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 270" fill="none">
+  <defs><style>text { font-family: Inter, Roboto, sans-serif; }</style></defs>
+  <rect width="580" height="270" fill="#0D1B2A"/>
+
+  <text x="290" y="26" text-anchor="middle" font-size="15" font-weight="700" fill="#42A5F5">SQL EMBEBIDO EN COBOL</text>
+  <text x="290" y="44" text-anchor="middle" font-size="11" fill="#78909C">Conexión PostgreSQL · Cursores · Transacciones</text>
+
+  <!-- COBOL -->
+  <rect x="20" y="65" width="120" height="40" rx="6" fill="#0D47A1" stroke="#1565C0" stroke-width="2"/>
+  <text x="80" y="90" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">COBOL</text>
+  <text x="80" y="102" text-anchor="middle" font-size="9" fill="#90A4AE">PROCEDURE DIVISION</text>
+
+  <!-- Flecha EXEC SQL -->
+  <polygon points="140,85 155,78 155,92" fill="#4CAF50"/>
+
+  <!-- SQL -->
+  <rect x="160" y="65" width="140" height="40" rx="6" fill="#1B5E20" stroke="#2E7D32" stroke-width="1.5"/>
+  <text x="230" y="85" text-anchor="middle" font-size="11" fill="#A5D6A7">EXEC SQL</text>
+  <text x="230" y="100" text-anchor="middle" font-size="9" fill="#81C784">SELECT/INSERT/UPDATE/DELETE</text>
+
+  <!-- Flecha a DB -->
+  <polygon points="300,85 315,78 315,92" fill="#FF7043"/>
+
+  <!-- PostgreSQL -->
+  <rect x="320" y="65" width="120" height="40" rx="6" fill="#263238" stroke="#37474F" stroke-width="1.5"/>
+  <text x="380" y="85" text-anchor="middle" font-size="12" font-weight="700" fill="#90CAF9">PostgreSQL</text>
+  <text x="380" y="100" text-anchor="middle" font-size="9" fill="#78909C">:5432 bootcamp</text>
+
+  <!-- Cursores -->
+  <rect x="20" y="140" width="250" height="55" rx="6" fill="#1A237E" stroke="#283593" stroke-width="1"/>
+  <text x="145" y="158" text-anchor="middle" font-size="11" font-weight="700" fill="#90CAF9">CURSO RES</text>
+  <text x="145" y="174" text-anchor="middle" font-size="9" fill="#78909C">DECLARE → OPEN → FETCH (loop) → CLOSE</text>
+  <text x="145" y="190" text-anchor="middle" font-size="9" fill="#546E7A">Multi-fila: SELECT devuelve N registros</text>
+
+  <!-- Transacciones -->
+  <rect x="290" y="140" width="270" height="55" rx="6" fill="#1A237E" stroke="#283593" stroke-width="1"/>
+  <text x="425" y="158" text-anchor="middle" font-size="11" font-weight="700" fill="#90CAF9">TRANSACCIONES</text>
+  <text x="425" y="174" text-anchor="middle" font-size="9" fill="#78909C">BEGIN → Operaciones → COMMIT / ROLLBACK</text>
+  <text x="425" y="190" text-anchor="middle" font-size="9" fill="#546E7A">Atomicidad: todo o nada (ACID)</text>
+
+  <!-- Códigos -->
+  <rect x="20" y="215" width="540" height="40" rx="6" fill="#1A2332" stroke="#263238" stroke-width="1"/>
+  <text x="290" y="233" text-anchor="middle" font-size="10" fill="#78909C">
+    SQLCODE: 0=OK · 100=NOT FOUND · 1-99=WARNING · -1 a -999=ERROR &nbsp;|&nbsp; SQLSTATE: "00000"=OK · "02000"=NOT FOUND
+  </text>
+  <text x="290" y="249" text-anchor="middle" font-size="9" fill="#546E7A">
+    Host variables: :WS-var &nbsp;|&nbsp; Siempre verificar SQLCODE después de cada EXEC SQL
+  </text>
+</svg>
