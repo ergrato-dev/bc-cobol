@@ -1,0 +1,93 @@
+# ============================================
+# DOCKER COMPOSE - bc-cobol Bootcamp
+# Servicios: COBOL dev + PostgreSQL
+# Única vía de ejecución aceptada
+# ============================================
+
+version: "3.9"
+
+services:
+  # ============================================
+  # Entorno de desarrollo COBOL
+  # ============================================
+  cobol:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: bc-cobol:latest
+    container_name: bc-cobol-dev
+    hostname: cobol-dev
+    stdin_open: true
+    tty: true
+    working_dir: /workspace
+    volumes:
+      # Montar todo el bootcamp en el contenedor
+      - .:/workspace:cached
+      # Directorios de datos persistentes
+      - cobol-data:/workspace/data
+      - cobol-output:/workspace/output
+    environment:
+      - DATABASE_URL=postgresql://cobol:cobol@db:5432/bootcamp
+      - PGHOST=db
+      - PGPORT=5432
+      - PGUSER=cobol
+      - PGPASSWORD=cobol
+      - PGDATABASE=bootcamp
+    networks:
+      - cobol-net
+    depends_on:
+      db:
+        condition: service_healthy
+    command: >
+      bash -c "
+        echo '============================================';
+        echo '  Bootcamp COBOL Zero to Hero';
+        echo '  GnuCOBOL: ' && cobc --version | head -1;
+        echo '============================================';
+        echo '';
+        echo 'Comandos útiles:';
+        echo '  cobc -x -free programa.cbl  → compilar';
+        echo '  ./programa                   → ejecutar';
+        echo '  cobc -x -Wall programa.cbl   → compilar con warnings';
+        echo '  bash test.sh                 → ejecutar pruebas';
+        echo '';
+        exec bash
+      "
+
+  # ============================================
+  # PostgreSQL para SQL Embebido (Semanas 11+)
+  # ============================================
+  db:
+    image: postgres:16-alpine
+    container_name: bc-cobol-db
+    hostname: db
+    environment:
+      - POSTGRES_USER=cobol
+      - POSTGRES_PASSWORD=cobol
+      - POSTGRES_DB=bootcamp
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./docker/db/init.sql:/docker-entrypoint-initdb.d/01-init.sql:ro
+    networks:
+      - cobol-net
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U cobol -d bootcamp"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+volumes:
+  cobol-data:
+    name: bc-cobol-data
+  cobol-output:
+    name: bc-cobol-output
+  postgres-data:
+    name: bc-cobol-postgres
+
+networks:
+  cobol-net:
+    name: bc-cobol-net
+    driver: bridge

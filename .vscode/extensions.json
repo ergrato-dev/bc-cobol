@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "bitlang.cobol",
+        "broadcommfd.cobol-language-support",
+        "streetsidesoftware.code-spell-checker",
+        "editorconfig.editorconfig",
+        "redhat.vscode-yaml"
+    ]
+}

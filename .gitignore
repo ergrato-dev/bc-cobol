@@ -1,0 +1,149 @@
+# ============================================
+# 🔷 COBOL - ARCHIVOS COMPILADOS Y BINARIOS
+# ============================================
+
+# Binarios compilados
+*.exe
+*.so
+*.dll
+*.o
+*.obj
+*.out
+*.cbl~
+
+# GnuCOBOL específicos
+*.cbl.lis
+*.lst
+*.cob
+*.cbl.o
+
+# ============================================
+# 📊 DATOS Y ARCHIVOS TEMPORALES
+# ============================================
+
+# Archivos de datos de prueba
+*.dat
+*.idx
+*.tmp
+*.temp
+
+# Archivos de sort temporales
+SORTWORK*
+SORTWK*
+
+# ============================================
+# 📝 IDEs Y EDITORES
+# ============================================
+
+# VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# ============================================
+# 🔐 VARIABLES DE ENTORNO Y SECRETOS
+# ============================================
+
+.env
+.env.*
+!.env.example
+!.env.template
+*.pem
+*.key
+secrets/
+*.secret
+
+# ============================================
+# 🗄️ BASES DE DATOS
+# ============================================
+
+*.db
+*.sqlite
+*.sqlite3
+
+# ============================================
+# 📊 LOGS Y CACHÉ
+# ============================================
+
+logs/
+*.log
+log/
+.cache/
+*.cache
+.mypy_cache/
+
+# ============================================
+# 🖥️ SISTEMA OPERATIVO
+# ============================================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+Thumbs.db
+[Dd]esktop.ini
+*~
+
+# ============================================
+# 📚 DOCUMENTACIÓN
+# ============================================
+
+docs/_build/
+site/
+*_pdf/
+
+# ============================================
+# 🐳 DOCKER
+# ============================================
+
+# Archivos de entorno
+.env
+!.env.example
+
+# Volúmenes Docker locales
+docker-data/
+postgres-data/
+data/
+output/
+
+# ============================================
+# 🎓 BOOTCAMP ESPECÍFICO
+# ============================================
+
+# Soluciones de proyectos (solo para instructores)
+bootcamp/**/3-proyecto/**/solution/
+**/3-proyecto/solution/
+
+# Logs de scripts
+scripts/logs/
+
+# Material de instructor
+**/_instructor-only/
+**/6-instructor/
+
+# Archivos temporales de estudiantes
+temp/
+tmp/
+scratch/
+notas-personales/
+
+# Respaldo de archivos fuente COBOL
+*.bak
+*.backup
+*.old
+
+# JCL de prueba
+*.jcl~

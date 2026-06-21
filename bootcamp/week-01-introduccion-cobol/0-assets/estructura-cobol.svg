@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 500" fill="none">
+  <defs>
+    <style>
+      text { font-family: Inter, Roboto, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="700" height="500" fill="#0D1B2A"/>
+
+  <!-- Título -->
+  <text x="350" y="40" text-anchor="middle" font-size="20" font-weight="700" fill="#42A5F5">ESTRUCTURA DE UN PROGRAMA COBOL</text>
+  <text x="350" y="62" text-anchor="middle" font-size="13" fill="#78909C">Las 4 Divisiones</text>
+
+  <!-- División 1: IDENTIFICATION -->
+  <rect x="40" y="80" width="620" height="75" rx="8" fill="#0D47A1" stroke="#1565C0" stroke-width="2"/>
+  <text x="60" y="108" font-size="14" font-weight="700" fill="#42A5F5">1. IDENTIFICATION DIVISION</text>
+  <text x="60" y="128" font-size="12" fill="#90A4AE">Identifica el programa. Solo PROGRAM-ID es obligatorio.</text>
+  <text x="60" y="146" font-size="11" fill="#546E7A" font-family="'Courier New', monospace">PROGRAM-ID. HOLA.</text>
+
+  <!-- Flecha 1→2 -->
+  <polygon points="350,157 340,165 360,165" fill="#1565C0"/>
+
+  <!-- División 2: ENVIRONMENT -->
+  <rect x="40" y="170" width="620" height="75" rx="8" fill="#1A237E" stroke="#1565C0" stroke-width="2"/>
+  <text x="60" y="198" font-size="14" font-weight="700" fill="#42A5F5">2. ENVIRONMENT DIVISION</text>
+  <text x="60" y="218" font-size="12" fill="#90A4AE">Describe el entorno: hardware, archivos (SELECT/ASSIGN).</text>
+  <text x="60" y="236" font-size="11" fill="#546E7A" font-family="'Courier New', monospace">FILE-CONTROL. SELECT ARCHIVO ASSIGN TO "datos.dat".</text>
+
+  <!-- Flecha 2→3 -->
+  <polygon points="350,247 340,255 360,255" fill="#1565C0"/>
+
+  <!-- División 3: DATA -->
+  <rect x="40" y="260" width="620" height="75" rx="8" fill="#0D47A1" stroke="#1565C0" stroke-width="2"/>
+  <text x="60" y="288" font-size="14" font-weight="700" fill="#42A5F5">3. DATA DIVISION</text>
+  <text x="60" y="308" font-size="12" fill="#90A4AE">Define variables, registros y estructuras de datos.</text>
+  <text x="60" y="326" font-size="11" fill="#546E7A" font-family="'Courier New', monospace">WORKING-STORAGE SECTION. 01 WS-NOMBRE PIC X(30).</text>
+
+  <!-- Flecha 3→4 -->
+  <polygon points="350,337 340,345 360,345" fill="#1565C0"/>
+
+  <!-- División 4: PROCEDURE -->
+  <rect x="40" y="350" width="620" height="75" rx="8" fill="#1A237E" stroke="#1565C0" stroke-width="2"/>
+  <text x="60" y="378" font-size="14" font-weight="700" fill="#42A5F5">4. PROCEDURE DIVISION</text>
+  <text x="60" y="398" font-size="12" fill="#90A4AE">Contiene las instrucciones ejecutables (el código real).</text>
+  <text x="60" y="416" font-size="11" fill="#546E7A" font-family="'Courier New', monospace">DISPLAY "Hola mundo". STOP RUN.</text>
+
+  <!-- Pie - analogía -->
+  <rect x="40" y="445" width="620" height="40" rx="6" fill="#263238" stroke="#37474F" stroke-width="1"/>
+  <text x="350" y="470" text-anchor="middle" font-size="12" fill="#78909C">
+    IDENTIFICATION = Portada &nbsp;|&nbsp; ENVIRONMENT = Configuración &nbsp;|&nbsp; DATA = Variables &nbsp;|&nbsp; PROCEDURE = Código
+  </text>
+</svg>
