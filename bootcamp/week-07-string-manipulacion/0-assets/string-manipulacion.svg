@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 280" fill="none">
+  <defs><style>text { font-family: Inter, Roboto, sans-serif; }</style></defs>
+  <rect width="580" height="280" fill="#0D1B2A"/>
+
+  <text x="290" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#42A5F5">MANIPULACIÓN DE STRINGS EN COBOL</text>
+  <text x="290" y="46" text-anchor="middle" font-size="11" fill="#78909C">STRING · UNSTRING · INSPECT · Reference Modification</text>
+
+  <!-- STRING -->
+  <rect x="15" y="70" width="175" height="140" rx="8" fill="#0D47A1" stroke="#1565C0" stroke-width="2"/>
+  <text x="102" y="92" text-anchor="middle" font-size="13" font-weight="700" fill="#42A5F5">STRING</text>
+  <text x="102" y="110" text-anchor="middle" font-size="9" fill="#90A4AE">Concatenar</text>
+  <text x="25" y="130" font-size="9" fill="#90CAF9">"Juan" + " " + "Perez"</text>
+  <text x="25" y="148" font-size="9" fill="#78909C">DELIMITED BY SPACE</text>
+  <text x="25" y="166" font-size="9" fill="#78909C">DELIMITED BY SIZE</text>
+  <text x="25" y="184" font-size="9" fill="#78909C">POINTER · ON OVERFLOW</text>
+  <text x="25" y="202" font-size="9" fill="#546E7A">Varios → Uno</text>
+
+  <!-- UNSTRING -->
+  <rect x="202" y="70" width="175" height="140" rx="8" fill="#1A237E" stroke="#1565C0" stroke-width="2"/>
+  <text x="289" y="92" text-anchor="middle" font-size="13" font-weight="700" fill="#42A5F5">UNSTRING</text>
+  <text x="289" y="110" text-anchor="middle" font-size="9" fill="#90A4AE">Dividir</text>
+  <text x="212" y="130" font-size="9" fill="#90CAF9">"A,B,C" → A / B / C</text>
+  <text x="212" y="148" font-size="9" fill="#78909C">DELIMITED BY ","</text>
+  <text x="212" y="166" font-size="9" fill="#78909C">DELIMITED BY ALL</text>
+  <text x="212" y="184" font-size="9" fill="#78909C">TALLYING · DELIMITER</text>
+  <text x="212" y="202" font-size="9" fill="#546E7A">Uno → Varios</text>
+
+  <!-- INSPECT -->
+  <rect x="389" y="70" width="175" height="140" rx="8" fill="#0D47A1" stroke="#1565C0" stroke-width="2"/>
+  <text x="476" y="92" text-anchor="middle" font-size="13" font-weight="700" fill="#42A5F5">INSPECT</text>
+  <text x="476" y="110" text-anchor="middle" font-size="9" fill="#90A4AE">Analizar/Modificar</text>
+  <text x="399" y="130" font-size="9" fill="#90CAF9">TALLYING contar</text>
+  <text x="399" y="148" font-size="9" fill="#78909C">REPLACING sustituir</text>
+  <text x="399" y="166" font-size="9" fill="#78909C">CONVERTING mapear</text>
+  <text x="399" y="184" font-size="9" fill="#78909C">BEFORE/AFTER limita</text>
+  <text x="399" y="202" font-size="9" fill="#546E7A">In-place</text>
+
+  <!-- Pie -->
+  <rect x="15" y="225" width="550" height="40" rx="6" fill="#1A2332" stroke="#263238" stroke-width="1"/>
+  <text x="290" y="243" text-anchor="middle" font-size="10" fill="#78909C">
+    TRIM · UPPER-CASE · LOWER-CASE · LENGTH · NUMVAL · SUBSTITUTE · referencia (inicio:largo)
+  </text>
+  <text x="290" y="258" text-anchor="middle" font-size="9" fill="#546E7A">FUNCTION intrinsic — disponibles en COBOL 85+ y GnuCOBOL</text>
+</svg>
