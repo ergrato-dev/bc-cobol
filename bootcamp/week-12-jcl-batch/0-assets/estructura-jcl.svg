@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 280" fill="none">
+  <defs><style>text { font-family: Inter, Roboto, sans-serif; }</style></defs>
+  <rect width="580" height="280" fill="#0D1B2A"/>
+
+  <text x="290" y="26" text-anchor="middle" font-size="15" font-weight="700" fill="#42A5F5">JCL — ESTRUCTURA DE UN JOB BATCH</text>
+  <text x="290" y="44" text-anchor="middle" font-size="11" fill="#78909C">JOB → EXEC → DD · Cada step ejecuta un programa COBOL</text>
+
+  <!-- JOB -->
+  <rect x="20" y="65" width="540" height="35" rx="6" fill="#0D47A1" stroke="#1565C0" stroke-width="2"/>
+  <text x="290" y="87" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">//BATCHDIA JOB (BANCO),'DIARIO',CLASS=A,MSGCLASS=X</text>
+
+  <line x1="290" y1="100" x2="290" y2="115" stroke="#1565C0" stroke-width="2"/>
+
+  <!-- STEP 1 -->
+  <rect x="20" y="120" width="540" height="40" rx="6" fill="#1A237E" stroke="#283593" stroke-width="1.5"/>
+  <text x="30" y="138" font-size="10" font-weight="700" fill="#90CAF9">//VALIDAR EXEC PGM=VALITRANS</text>
+  <text x="30" y="153" font-size="9" fill="#78909C">//ENTRADA DD DSN=TRANS.DIARIAS,DISP=SHR</text>
+
+  <line x1="290" y1="160" x2="290" y2="175" stroke="#4CAF50" stroke-width="2"/>
+
+  <!-- STEP 2 -->
+  <rect x="20" y="180" width="540" height="40" rx="6" fill="#1A237E" stroke="#283593" stroke-width="1.5"/>
+  <text x="30" y="198" font-size="10" font-weight="700" fill="#90CAF9">//ORDENAR EXEC PGM=SORT,COND=(0,NE,VALIDAR)</text>
+  <text x="30" y="213" font-size="9" fill="#78909C">//SORTIN  DD DSN=*.VALIDAR.TRANSOK,DISP=SHR &nbsp;|&nbsp; if STEP1 ok → ejecutar</text>
+
+  <line x1="290" y1="220" x2="290" y2="235" stroke="#4CAF50" stroke-width="2"/>
+
+  <!-- STEP 3 -->
+  <rect x="20" y="240" width="540" height="30" rx="6" fill="#1A237E" stroke="#283593" stroke-width="1.5"/>
+  <text x="290" y="260" text-anchor="middle" font-size="10" font-weight="700" fill="#90CAF9">//REPORTE EXEC PGM=REPDIARIO,COND=EVEN</text>
+</svg>
