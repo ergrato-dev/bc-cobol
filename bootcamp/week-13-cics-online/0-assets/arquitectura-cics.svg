@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 270" fill="none">
+  <defs><style>text { font-family: Inter, Roboto, sans-serif; }</style></defs>
+  <rect width="580" height="270" fill="#0D1B2A"/>
+
+  <text x="290" y="26" text-anchor="middle" font-size="15" font-weight="700" fill="#42A5F5">CICS — ARQUITECTURA DE TRANSACCION</text>
+  <text x="290" y="44" text-anchor="middle" font-size="11" fill="#78909C">Terminal 3270 → TRANSID → Programa COBOL → Archivos VSAM</text>
+
+  <!-- Terminal -->
+  <rect x="20" y="70" width="110" height="50" rx="6" fill="#263238" stroke="#37474F" stroke-width="1.5"/>
+  <text x="75" y="92" text-anchor="middle" font-size="10" fill="#90CAF9">TERMINAL</text>
+  <text x="75" y="108" text-anchor="middle" font-size="9" fill="#78909C">3270</text>
+
+  <text x="140" y="98" font-size="16" fill="#4CAF50">→</text>
+
+  <!-- CICS -->
+  <rect x="160" y="60" width="250" height="70" rx="8" fill="#0D47A1" stroke="#1565C0" stroke-width="2"/>
+  <text x="285" y="82" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF">CICS REGION</text>
+  <text x="170" y="102" font-size="9" fill="#90CAF9">TRANSID: CSAL</text>
+  <text x="170" y="116" font-size="9" fill="#90CAF9">PGM: CONSULTA</text>
+  <text x="260" y="102" font-size="9" fill="#78909C">EXEC CICS</text>
+  <text x="260" y="116" font-size="9" fill="#78909C">SEND/RECEIVE MAP</text>
+
+  <text x="420" y="98" font-size="16" fill="#FF7043">→</text>
+
+  <!-- VSAM -->
+  <rect x="445" y="70" width="115" height="50" rx="6" fill="#1A237E" stroke="#283593" stroke-width="1.5"/>
+  <text x="502" y="92" text-anchor="middle" font-size="10" fill="#90CAF9">VSAM</text>
+  <text x="502" y="108" text-anchor="middle" font-size="9" fill="#78909C">READ/WRITE/DELETE</text>
+
+  <!-- Pseudo-Conversacion -->
+  <rect x="60" y="155" width="460" height="55" rx="6" fill="#1A2332" stroke="#263238" stroke-width="1"/>
+  <text x="290" y="173" text-anchor="middle" font-size="11" font-weight="700" fill="#42A5F5">PSEUDO-CONVERSACION</text>
+  <text x="290" y="190" text-anchor="middle" font-size="9" fill="#78909C">
+    Pantalla 1 (Menu) → RETURN TRANSID + COMMAREA → Pantalla 2 (Consulta) → RETURN TRANSID + COMMAREA → Pantalla 3 (Resultado)
+  </text>
+  <text x="290" y="205" text-anchor="middle" font-size="9" fill="#546E7A">COMMAREA mantiene: estado actual, numero de cuenta, datos acumulados entre pantallas</text>
+
+  <!-- Simulacion -->
+  <rect x="60" y="225" width="460" height="30" rx="6" fill="#263238" stroke="#37474F" stroke-width="1"/>
+  <text x="290" y="244" text-anchor="middle" font-size="10" fill="#78909C">
+    Simulacion: DISPLAY/ACCEPT → PERFORM UNTIL + variable de estado → archivos indexados COBOL
+  </text>
+</svg>
