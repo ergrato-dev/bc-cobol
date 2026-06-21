@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 290" fill="none">
+  <defs><style>text { font-family: Inter, Roboto, sans-serif; }</style></defs>
+  <rect width="580" height="290" fill="#0D1B2A"/>
+
+  <text x="290" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#42A5F5">CONTROL DE RUPTURA (BREAK CONTROL)</text>
+  <text x="290" y="46" text-anchor="middle" font-size="11" fill="#78909C">Agrupar → Detectar cambio → Subtotal → Resetear</text>
+
+  <!-- Datos ordenados -->
+  <rect x="20" y="70" width="160" height="150" rx="6" fill="#1A237E" stroke="#283593" stroke-width="1"/>
+  <text x="100" y="90" text-anchor="middle" font-size="11" font-weight="700" fill="#90CAF9">Archivo ordenado</text>
+  <text x="30" y="115" font-size="9" fill="#A5D6A7">CC  $1,000</text>
+  <text x="30" y="133" font-size="9" fill="#A5D6A7">CC  $2,000</text>
+  <text x="30" y="151" font-size="9" fill="#A5D6A7">CC  $3,000</text>
+  <line x1="30" y1="158" x2="170" y2="158" stroke="#EF5350" stroke-width="0.5" stroke-dasharray="3 2"/>
+  <text x="30" y="173" font-size="9" fill="#FFAB40">CA  $5,000</text>
+  <text x="30" y="191" font-size="9" fill="#FFAB40">CA  $4,000</text>
+  <text x="30" y="209" font-size="9" fill="#FFAB40">>> RUPTURA CA</text>
+
+  <!-- Algoritmo -->
+  <rect x="200" y="70" width="170" height="150" rx="6" fill="#0D47A1" stroke="#1565C0" stroke-width="2"/>
+  <text x="285" y="90" text-anchor="middle" font-size="11" font-weight="700" fill="#42A5F5">Algoritmo</text>
+  <text x="210" y="115" font-size="9" fill="#90CAF9">1. clave_actual = reg.clave</text>
+  <text x="210" y="133" font-size="9" fill="#90CAF9">2. IF clave_actual ≠ anterior</text>
+  <text x="218" y="149" font-size="8" fill="#78909C">   → IMPRIMIR subtotal</text>
+  <text x="218" y="165" font-size="8" fill="#78909C">   → RESETEAR acumulador</text>
+  <text x="210" y="183" font-size="9" fill="#90CAF9">3. acumular monto + cont++</text>
+  <text x="210" y="201" font-size="9" fill="#90CAF9">4. clave_anterior = actual</text>
+  <text x="210" y="217" font-size="9" fill="#FFAB40">5. Al EOF: última ruptura</text>
+
+  <!-- Salida -->
+  <rect x="390" y="70" width="170" height="150" rx="6" fill="#263238" stroke="#37474F" stroke-width="1"/>
+  <text x="475" y="90" text-anchor="middle" font-size="11" font-weight="700" fill="#42A5F5">Reporte</text>
+  <text x="400" y="115" font-size="9" fill="#90CAF9">Subtotal CC: $6,000</text>
+  <text x="400" y="140" font-size="9" fill="#78909C">3 registros</text>
+  <line x1="400" y1="150" x2="550" y2="150" stroke="#37474F" stroke-width="0.5"/>
+  <text x="400" y="170" font-size="9" fill="#90CAF9">Subtotal CA: $9,000</text>
+  <text x="400" y="195" font-size="9" fill="#78909C">2 registros</text>
+  <line x1="400" y1="205" x2="550" y2="205" stroke="#37474F" stroke-width="0.5"/>
+  <text x="400" y="220" font-size="9" fill="#FFAB40">TOTAL: $15,000</text>
+
+  <!-- Pie -->
+  <rect x="20" y="240" width="540" height="35" rx="6" fill="#1A2332" stroke="#263238" stroke-width="1"/>
+  <text x="290" y="260" text-anchor="middle" font-size="10" fill="#78909C">
+    Requisito: archivo ORDENADO por clave · Acumuladores COMP-3 · No olvidar última ruptura post-EOF
+  </text>
+</svg>
